@@ -13,14 +13,29 @@
             <P class="text-muted">Charcutería Gregoriana <br>
                 Edf. Gran Colombia, PB Av. Roosevelt, <br>
                 Caracas 1040, Distrito Capital</P>
-                <!-- <script 
-                src="https://www.google.com/maps/place/Charcutería+Gregoriana/@10.482749,-66.8999265,17z/data=!4m15!1m8!3m7!1s0x8c2a598102143aa9:0x3142ff3d3a874476!2sCharcutería+Gregoriana!8m2!3d10.4827437!4d-66.8973569!10e1!16s%2Fg%2F11w93xm6tn!3m5!1s0x8c2a598102143aa9:0x3142ff3d3a874476!8m2!3d10.4827437!4d-66.8973569!16s%2Fg%2F11w93xm6tn?hl=es&entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" 
-                async 
-                defer>
-              </script> -->
         </div>
+
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap">
+      </script>
+
+
     </div>
 </div>
 <div class="bg-dark text-light text-center border-top wow fadeIn">
     <p class="mb-0 py-3 text-muted small">&copy; Copyright <script>document.write(new Date().getFullYear())</script> reservado por <i class="ti-heart text-danger"></i> Abeljsz</p>
 </div>
+<script>
+    function initMap() {
+      // Asegúrate de que el elemento con ID 'map' esté presente
+      var mapElement = document.getElementById('map');
+      if (mapElement) {
+        var map = new google.maps.Map(mapElement, {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      } else {
+        console.error("Elemento con ID 'map' no encontrado.");
+      }
+    }
+</script>                
